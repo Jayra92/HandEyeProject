@@ -62,17 +62,32 @@ void sortBlocks(Block* redBlock, Block* blueBlock, Block* yellowBlock)
 	//sort the blocks
 	//assume values
 	int positions[3] = { redBlock->getPosx(), yellowBlock->getPosx(), blueBlock->getPosx() };
+	
 	int redPos = 1, bluePos = 2, yellowPos = 3;
+	
+	//if any position isnt found, return 0 for each position.
+	if (positions[0] = 0 || positions[1] = 0 || positions[2] = 0)
+	{
+		redPos = 0; 
+		bluePos = 0; 
+		yellowPos = 0;
+	}
+	
+	else
+	{
 
-	sort(positions, positions + 3);
+		sort(positions, positions + 3);
 
-	redPos = distance(positions, (find(positions, positions + 3, redBlock->getPosx()))) + 1;
-	bluePos = distance(positions, (find(positions, positions + 3, blueBlock->getPosx()))) + 1;
-	yellowPos = distance(positions, (find(positions, positions + 3, yellowBlock->getPosx()))) + 1;
+		redPos = distance(positions, (find(positions, positions + 3, redBlock->getPosx()))) + 1;
+		bluePos = distance(positions, (find(positions, positions + 3, blueBlock->getPosx()))) + 1;
+		yellowPos = distance(positions, (find(positions, positions + 3, yellowBlock->getPosx()))) + 1;
 
-	blueBlock->setPosition(bluePos);
-	redBlock->setPosition(redPos);
-	yellowBlock->setPosition(yellowPos);
+		blueBlock->setPosition(bluePos);
+		redBlock->setPosition(redPos);
+		yellowBlock->setPosition(yellowPos);
+	}
+	
+	return;
 }
 
 int process(VideoCapture& capture)
