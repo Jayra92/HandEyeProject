@@ -231,6 +231,7 @@ int Comms(int BlockPositions)
 	case 231: {LeftPos = 129; MiddlePos = 34; RightPos = 68; break; };
 	case 312: {LeftPos = 65; MiddlePos = 130; RightPos = 36; break; };
 	case 321: {LeftPos = 129; MiddlePos = 66; RightPos = 36; break; };
+	default: { LeftPos = 0; MiddlePos = 0; RightPos= 0; break;};
 	}
 
 	// open port
