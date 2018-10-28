@@ -1,0 +1,64 @@
+Search Home
+Open Gripper
+Go to Position 1 Speed 50 (%)
+Wait Until Digital Input 1 is ON
+Go Linear to Position 2 Speed 60 (%)
+Teach Position 20 by XYZ. Relative to: 5. Coordinates: 0 0 3000 0 0
+Go Linear to Position 20 Speed 50 (%)
+Go Linear to Position 5 Speed 30 (%)
+Close Gripper
+Go Linear to Position 2 Speed 60 (%)
+Remark: branch for pod pos
+If Input 6 On Call Subroutine RED
+If Input 7 On Call Subroutine BLUE
+If Input 8 On Call Subroutine YELLOW
+Go Linear to Position 6 Speed 50 (%)
+Teach Position 20 by XYZ. Relative to: 4. Coordinates: 0 0 3000 0 0
+Go Linear to Position 20 Speed 50 (%)
+Go Linear to Position 4 Speed 35 (%)
+Close Gripper
+Wait Until Digital Input 1 is OFF
+Wait Until Digital Input 2 is ON
+Go Linear to Position 2 Speed 60 (%)
+Remark: pc is sending pos 2
+If Input 6 On Call Subroutine RED
+If Input 7 On Call Subroutine BLUE
+If Input 8 On Call Subroutine YELLOW
+Go Linear to Position 6 Speed 50 (%)
+Teach Position 20 by XYZ. Relative to: 3. Coordinates: 0 0 3000 0 0
+Go Linear to Position 20 Speed 50 (%)
+Go Linear to Position 3 Speed 35 (%)
+Close Gripper
+Wait Until Digital Input 2 is OFF
+Wait Until Digital Input 3 is ON
+Go Linear to Position 2 Speed 60 (%)
+Remark: pc is sending pos 3
+If Input 6 On Call Subroutine RED
+If Input 7 On Call Subroutine BLUE
+If Input 8 On Call Subroutine YELLOW
+Go to Position 1 Speed 70 (%)
+Close Gripper
+Set Subroutine YELLOW
+Remark: set 20 to above yel
+Teach Position 20 by XYZ. Relative to: 8. Coordinates: 0 0 10000 0 0
+Go Linear to Position 20 Speed 50 (%)
+Go Linear to Position 8 Speed 30 (%)
+Open Gripper
+Go Linear to Position 20 Speed 50 (%)
+Return from Subroutine
+Set Subroutine RED
+Remark: set 20 to above red
+Teach Position 20 by XYZ. Relative to: 7. Coordinates: 0 0 10000 0 0
+Go Linear to Position 20 Speed 50 (%)
+Go Linear to Position 7 Speed 50 (%)
+Open Gripper
+Go Linear to Position 20 Speed 50 (%)
+Return from Subroutine
+Set Subroutine BLUE
+Remark: set 20 to above blue
+Teach Position 20 by XYZ. Relative to: 9. Coordinates: 0 0 10000 0 0
+Go Linear to Position 20 Speed 50 (%)
+Go Linear to Position 9 Speed 50 (%)
+Open Gripper
+Go Linear to Position 20 Speed 50 (%)
+Return from Subroutine
